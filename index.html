@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head />
+  <head>
+    <title>API Docs</title>
+    <meta charset="utf-8"/>
+  </head>
   <body>
-    <H1>Redoc in action</H1>
-    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"> </script>
-    <div id="redoc-container"></div>
+    <!-- Aquí se renderiza la documentación -->
+    <redoc spec-url="https://github.com/ReyesAntonio2004/RedocTest/blob/main/swagger.yaml"></redoc>
 
-    <script>
-      Redoc.init('http://petstore.swagger.io/v2/swagger.json', {
-        "expandResponses": "200,400"
-      }, document.getElementById('redoc-container'))
-    </script>
+    <!-- Script de ReDoc desde el CDN -->
+    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   </body>
 </html>
