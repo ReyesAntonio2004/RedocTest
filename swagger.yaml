@@ -1,4 +1,4 @@
-﻿openapi: '3.0.1'
+openapi: '3.0.1'
 info:
   title: Combined API Documentation
   version: '1.0.0'
@@ -6,7 +6,7 @@ paths:
   /messages/{MessageSID}:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetMessage
       parameters:
           - name: MessageSID
@@ -45,7 +45,7 @@ paths:
   /messages/:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetMessages
       parameters:
           - name: messageType
@@ -132,7 +132,7 @@ paths:
   /messages/read:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetReadMessages
       parameters:
           - name: messageType
@@ -225,7 +225,7 @@ paths:
   /messages/status/{MessageSID}:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetMessageStatus
       parameters:
           - name: MessageSID
@@ -258,7 +258,7 @@ paths:
   /messages/status/:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetAllMessageStatus
       parameters:
           - name: messageType
@@ -315,7 +315,7 @@ paths:
   /messages/{MessageSID}/attachment/{ImageSID}:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetMessageAttachment
       parameters:
           - name: MessageSID
@@ -354,7 +354,7 @@ paths:
   /messages/{MessageSID}/signature/{ImageSID}:
     get:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  GetMessageSignature
       parameters:
           - name: MessageSID
@@ -393,7 +393,7 @@ paths:
   /messages:
     post:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  PostMessage
       requestBody:
         content:
@@ -433,7 +433,7 @@ paths:
   /messages/recall/{MessageSID}:
     post:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  PostMessageRecall
       parameters:
           - name: MessageSID
@@ -466,7 +466,7 @@ paths:
   /messages/recall:
     post:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  PostMessageListRecall
       requestBody:
         content:
@@ -514,7 +514,7 @@ paths:
   /messages/update/{MessageSID}:
     put:
       tags:
-        - IMessageWebService
+        - Form / Messaging
       summary:  PutMessage
       parameters:
           - name: MessageSID
@@ -522,7 +522,7 @@ paths:
             required: true
             schema:
               type: "string"
-            example: 20
+            example: 
       responses:
         200:
           description: OK
@@ -547,7 +547,7 @@ paths:
   /DelayDetail/:
     get:
       tags:
-        - IDelayDetailWebService
+        - Routing / Dispatch
       summary:  GetDelayDetailReportList
       parameters:
           - name: organizationID
@@ -640,7 +640,7 @@ paths:
   /DelaySummary/:
     get:
       tags:
-        - IDelaySummaryWebService
+        - Routing / Dispatch
       summary:  GetDelaySummaryReportList
       parameters:
           - name: organizationID
@@ -733,7 +733,7 @@ paths:
   /OORR/:
     get:
       tags:
-        - IOutOfRouteWebService
+        - Routing / Dispatch
       summary:  GetOutOfRouteReport
       parameters:
           - name: organizationID
@@ -802,7 +802,7 @@ paths:
   /PVAVLSR/:
     get:
       tags:
-        - IPlanVsActualVsLearnedStandardsWebService
+        - Routing / Dispatch
       summary:  GetPlanVsActualVsLearnedStandardsReport
       parameters:
           - name: organizationID
@@ -883,7 +883,7 @@ paths:
   /PVAR/:
     get:
       tags:
-        - IPlanVsActualVsLearnedStandardsWebService
+        - Routing / Dispatch
       summary:  GetPlanVsActualReport
       parameters:
           - name: organizationID
@@ -952,7 +952,7 @@ paths:
   /RSTR/:
     get:
       tags:
-        - IRouteStatusWebService
+        - Routing / Dispatch
       summary:  GetRouteStatusReport
       parameters:
           - name: organizationID
@@ -1021,7 +1021,7 @@ paths:
   /SITR/:
     get:
       tags:
-        - ISiteActivityWebService
+        - Routing / Dispatch
       summary:  GetSiteActivityReport
       parameters:
           - name: organizationID
@@ -1090,7 +1090,7 @@ paths:
   /Trailer/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldTrailerData
       parameters:
           - name: organizationSid
@@ -1159,7 +1159,7 @@ paths:
   /ShippingInfo/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetShippingData
       parameters:
           - name: organizationSid
@@ -1228,7 +1228,7 @@ paths:
   /CarrierInfo/{organizationSID}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetCarrierInfo
       parameters:
           - name: organizationSID
@@ -1261,7 +1261,7 @@ paths:
   /CoDrivers/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetCoDriverData
       parameters:
           - name: organizationSid
@@ -1330,7 +1330,7 @@ paths:
   /IntermediateLogs/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetIntermediateLogs
       parameters:
           - name: organizationSid
@@ -1399,7 +1399,7 @@ paths:
   /CertifiedLogs/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetCertifiedLogs
       parameters:
           - name: organizationSid
@@ -1468,7 +1468,7 @@ paths:
   /EnginePowerEvents/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEnginePowerEvents
       parameters:
           - name: organizationSid
@@ -1537,7 +1537,7 @@ paths:
   /EldLoginLogoutActivity/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldLoginLogoutActivity
       parameters:
           - name: organizationSid
@@ -1606,7 +1606,7 @@ paths:
   /DriverException/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetDriverExceptions
       parameters:
           - name: organizationSid
@@ -1675,7 +1675,7 @@ paths:
   /Remarks/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldRemarks
       parameters:
           - name: organizationSid
@@ -1744,7 +1744,7 @@ paths:
   /EldDriverStatus/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldDriverStatus
       parameters:
           - name: organizationSid
@@ -1813,7 +1813,7 @@ paths:
   /UnassignedActivity/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetUnassignedActivity
       parameters:
           - name: organizationSid
@@ -1882,7 +1882,7 @@ paths:
   /VehicleEldData/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetVehicleEldData
       parameters:
           - name: organizationSid
@@ -1951,7 +1951,7 @@ paths:
   /EldDiagAndMalfunctions/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldDiagAndMalfunctions
       parameters:
           - name: organizationSid
@@ -2020,7 +2020,7 @@ paths:
   /DriverTerminalInfo/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetDriverTerminalInfo
       parameters:
           - name: organizationSid
@@ -2089,7 +2089,7 @@ paths:
   /DriverRuleChange/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetEldDriverRuleChange
       parameters:
           - name: organizationSid
@@ -2158,7 +2158,7 @@ paths:
   /DriverAnnotations/{organizationSid}:
     get:
       tags:
-        - IEldLogWebService
+        - Group
       summary:  GetDriverAnnotations
       parameters:
           - name: organizationSid
@@ -2227,7 +2227,7 @@ paths:
   /UVA/:
     get:
       tags:
-        - IUnassignedVehicleActivityWebService
+        - Compliance
       summary:  GetUnassignedVehicleActivity
       parameters:
           - name: organizationID
@@ -2296,7 +2296,7 @@ paths:
   /UVA/vehicle/{VehicleID}:
     get:
       tags:
-        - IUnassignedVehicleActivityWebService
+        - Compliance
       summary:  GetUnassignedVehicleActivityByVehicleId
       parameters:
           - name: VehicleID
@@ -2368,10 +2368,10 @@ paths:
             application/json:
               schema:
                   type: "string"
-  v2/UVA/vehicle/{VehicleID}:
+  /v2/UVA/vehicle/{VehicleID}:
     get:
       tags:
-        - IUnassignedVehicleActivityWebService
+        - Compliance
       summary:  GetUnassignedVehicleActivityByVehicleIdV2
       parameters:
           - name: VehicleID
@@ -2446,7 +2446,7 @@ paths:
   /UVA/segment/{segmentSid}/classification/:
     put:
       tags:
-        - IUnassignedVehicleActivityWebService
+        - Compliance
       summary:  PutUnassignedVehicleActivityClassificationBySegmentSid
       parameters:
           - name: segmentSid
@@ -2493,7 +2493,7 @@ paths:
   /criticaleventsummary/:
     get:
       tags:
-        - ICriticalEventWebService
+        - Performance
       summary:  GetCriticalEventSummary
       parameters:
           - name: organizationID
@@ -2580,7 +2580,7 @@ paths:
   /criticaleventsummary/vehicle/{VehicleID}:
     get:
       tags:
-        - ICriticalEventWebService
+        - Performance
       summary:  GetCriticalEventSummaryByVehicleId
       parameters:
           - name: VehicleID
@@ -2667,7 +2667,7 @@ paths:
   /criticaleventsummary/driver/{DriverID}:
     get:
       tags:
-        - ICriticalEventWebService
+        - Performance
       summary:  GetCriticalEventSummaryByDriverId
       parameters:
           - name: DriverID
@@ -2754,7 +2754,7 @@ paths:
   /blackboxsummary/:
     get:
       tags:
-        - IBlackBoxWebService
+        - Performance
       summary:  GetBlackBoxSummary
       parameters:
           - name: organizationID
@@ -2835,7 +2835,7 @@ paths:
   /blackboxsummary/vehicle/{VehicleID}:
     get:
       tags:
-        - IBlackBoxWebService
+        - Performance
       summary:  GetBlackBoxSummaryByVehicleId
       parameters:
           - name: VehicleID
@@ -2916,7 +2916,7 @@ paths:
   /blackboxsummary/driver/{DriverID}:
     get:
       tags:
-        - IBlackBoxWebService
+        - Performance
       summary:  GetBlackBoxSummaryByDriverId
       parameters:
           - name: DriverID
@@ -2997,7 +2997,7 @@ paths:
   /reportdata/{ReportID}:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportData
       parameters:
           - name: ReportID
@@ -3031,7 +3031,7 @@ paths:
   /rawdata/{ReportID}:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetRawReportData
       parameters:
           - name: ReportID
@@ -3065,7 +3065,7 @@ paths:
   /reportdata:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportDataPath
       parameters:
           - name: ReportPath
@@ -3099,7 +3099,7 @@ paths:
   /rawdata:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetRawReportDataPath
       parameters:
           - name: ReportPath
@@ -3133,7 +3133,7 @@ paths:
   /reportdataex/{ReportID}:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportDataEx
       parameters:
           - name: ReportID
@@ -3166,7 +3166,7 @@ paths:
   /reportdataex:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportDataExPath
       parameters:
           - name: ReportPath
@@ -3199,7 +3199,7 @@ paths:
   /reportparameters/{ReportID}:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportParameters
       parameters:
           - name: ReportID
@@ -3232,7 +3232,7 @@ paths:
   /reportparameters:
     get:
       tags:
-        - IReportDataWebService
+        - Group
       summary:  GetReportParametersPath
       parameters:
           - name: ReportPath
@@ -3265,7 +3265,7 @@ paths:
   /Summary/:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetAllOperationSummary
       parameters:
           - name: assetType
@@ -3346,7 +3346,7 @@ paths:
   /Summary/vehicle/{VehicleID}:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetOperationSummaryByVehicleId
       parameters:
           - name: VehicleID
@@ -3397,7 +3397,7 @@ paths:
   /Summary/driver/{DriverID}:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetOperationSummaryByDriverId
       parameters:
           - name: DriverID
@@ -3448,7 +3448,7 @@ paths:
   /Profile/:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetAllOperationProfile
       parameters:
           - name: assetType
@@ -3529,7 +3529,7 @@ paths:
   /Profile/vehicle/{VehicleID}:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetOperationProfileByVehicleId
       parameters:
           - name: VehicleID
@@ -3580,7 +3580,7 @@ paths:
   /Profile/driver/{DriverID}:
     get:
       tags:
-        - IOperationWebService
+        - Performance
       summary:  GetOperationProfileByDriverId
       parameters:
           - name: DriverID
@@ -3631,7 +3631,7 @@ paths:
   /JurisdictionCrossings/:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetAllJurisdictionCrossings
       parameters:
           - name: organizationId
@@ -3694,7 +3694,7 @@ paths:
   /JurisdictionCrossings/{vehicleId}:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetJurisdictionCrossingsByVehicleId
       parameters:
           - name: vehicleId
@@ -3757,7 +3757,7 @@ paths:
   /FuelReceipts/:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetAllFuelReceipts
       parameters:
           - name: organizationId
@@ -3832,7 +3832,7 @@ paths:
   /FuelReceipts/{vehicleId}:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetFuelReceiptsByVehicleId
       parameters:
           - name: vehicleId
@@ -3895,7 +3895,7 @@ paths:
   /FuelReceipts:
     post:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  AddFuelReceipts
       requestBody:
         content:
@@ -3935,7 +3935,7 @@ paths:
   /Distances/:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetDistances
       parameters:
           - name: organizationId
@@ -4004,7 +4004,7 @@ paths:
   /Distances/{vehicleId}:
     get:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  GetDistancesByVehicleId
       parameters:
           - name: vehicleId
@@ -4067,7 +4067,7 @@ paths:
   /Distances:
     post:
       tags:
-        - IIFTAWebService
+        - Compliance
       summary:  AddDistances
       requestBody:
         content:
@@ -4107,7 +4107,7 @@ paths:
   /DVIR/:
     get:
       tags:
-        - IDVIRWebService
+        - Compliance
       summary:  GetAllDVIR
       parameters:
           - name: organizationId
@@ -4194,7 +4194,7 @@ paths:
   /DVIR/vehicle/{vehicleId}:
     get:
       tags:
-        - IDVIRWebService
+        - Compliance
       summary:  GetDVIRByVehicleId
       parameters:
           - name: vehicleId
@@ -4281,7 +4281,7 @@ paths:
   /DVIR/trailer/{trailerId}:
     get:
       tags:
-        - IDVIRWebService
+        - Compliance
       summary:  GetDVIRByTrailerId
       parameters:
           - name: trailerId
@@ -4368,7 +4368,7 @@ paths:
   /DVIR/certify:
     put:
       tags:
-        - IDVIRWebService
+        - Compliance
       summary:  CertifyRepair
       requestBody:
         content:
@@ -4408,7 +4408,7 @@ paths:
   /DVIR/repair:
     put:
       tags:
-        - IDVIRWebService
+        - Compliance
       summary:  AddRepairs
       requestBody:
         content:
@@ -4448,7 +4448,7 @@ paths:
   /FaultCodes/:
     get:
       tags:
-        - IFaultCodeWebService
+        - Performance
       summary:  GetAllFaultCodes
       parameters:
           - name: organizationId
@@ -4511,7 +4511,7 @@ paths:
   /FaultCodes/vehicle/{VehicleID}:
     get:
       tags:
-        - IFaultCodeWebService
+        - Performance
       summary:  GetFaultCodesByVehicleId
       parameters:
           - name: VehicleID
@@ -4574,7 +4574,7 @@ paths:
   /alerts/vehicles/stoparrival/{VehicleSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopArrivalAlertByVehicleSID
       parameters:
           - name: VehicleSID
@@ -4607,7 +4607,7 @@ paths:
   /alerts/drivers/stoparrival/{DriverSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopArrivalAlertByDriverSID
       parameters:
           - name: DriverSID
@@ -4640,7 +4640,7 @@ paths:
   /alerts/vehicles/stoparrival/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopArrivalAllVehicleAlert
       parameters:
           - name: asOfDateTime
@@ -4697,7 +4697,7 @@ paths:
   /alerts/drivers/stoparrival/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopArrivalAllDriverAlert
       parameters:
           - name: asOfDateTime
@@ -4754,7 +4754,7 @@ paths:
   /alerts/vehicles/stopdeparture/{VehicleSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDepartureAlertByVehicleSID
       parameters:
           - name: VehicleSID
@@ -4787,7 +4787,7 @@ paths:
   /alerts/drivers/stopdeparture/{DriverSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDepartureAlertByDriverSID
       parameters:
           - name: DriverSID
@@ -4820,7 +4820,7 @@ paths:
   /alerts/vehicles/stopdeparture/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDepartureAllVehicleAlert
       parameters:
           - name: asOfDateTime
@@ -4877,7 +4877,7 @@ paths:
   /alerts/drivers/stopdeparture/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDepartureAllDriverAlert
       parameters:
           - name: asOfDateTime
@@ -4934,7 +4934,7 @@ paths:
   /alerts/vehicles/stopdetention/{VehicleSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDetentionAlertByVehicleSID
       parameters:
           - name: VehicleSID
@@ -4967,7 +4967,7 @@ paths:
   /alerts/drivers/stopdetention/{DriverSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDetentionAlertByDriverSID
       parameters:
           - name: DriverSID
@@ -5000,7 +5000,7 @@ paths:
   /alerts/vehicles/stopdetention/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDetentionAllVehicleAlert
       parameters:
           - name: asOfDateTime
@@ -5057,7 +5057,7 @@ paths:
   /alerts/drivers/stopdetention/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetStopDetentionAllDriverAlert
       parameters:
           - name: asOfDateTime
@@ -5114,7 +5114,7 @@ paths:
   /alerts/drivers/login/{DriverSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetDriverLoginAlertByDriverSID
       parameters:
           - name: DriverSID
@@ -5147,7 +5147,7 @@ paths:
   /alerts/drivers/logout/{DriverSID}:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetDriverLogoutAlertByDriverSID
       parameters:
           - name: DriverSID
@@ -5180,7 +5180,7 @@ paths:
   /alerts/drivers/login/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetAllDriverLoginAlert
       parameters:
           - name: asOfDateTime
@@ -5237,7 +5237,7 @@ paths:
   /alerts/drivers/logout/:
     get:
       tags:
-        - IAlertWebService
+        - Group
       summary:  GetAllDriverLogoutAlert
       parameters:
           - name: asOfDateTime
@@ -5294,7 +5294,7 @@ paths:
   /alerts/:
     put:
       tags:
-        - IAlertWebService
+        - Group
       summary:  PutAlert
       requestBody:
         content:
@@ -5346,7 +5346,7 @@ paths:
   /driverlog/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllDriverLog
       parameters:
           - name: organizationID
@@ -5415,7 +5415,7 @@ paths:
   /driverlog/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetDriverLogById
       parameters:
           - name: DriverID
@@ -5466,7 +5466,7 @@ paths:
   /driverlogdetails/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllModifiedDriverLog
       parameters:
           - name: organizationID
@@ -5517,7 +5517,7 @@ paths:
   /driverlogdetails/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetModifiedDriverLogById
       parameters:
           - name: DriverID
@@ -5556,7 +5556,7 @@ paths:
   /v2/driverlogdetails/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllModifiedDriverLogV2
       parameters:
           - name: organizationID
@@ -5606,7 +5606,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  AddDriverLogDetails
       requestBody:
         content:
@@ -5645,7 +5645,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  UpdateDriverLogDetails
       requestBody:
         content:
@@ -5685,7 +5685,7 @@ paths:
   /v2/driverlogdetails/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetModifiedDriverLogByIdV2
       parameters:
           - name: DriverID
@@ -5724,7 +5724,7 @@ paths:
   /v3/driverlog/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllDriverLogV3
       parameters:
           - name: organizationID
@@ -5805,7 +5805,7 @@ paths:
   /v3/driverlog/{driverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetDriverLogByIdV3
       parameters:
           - name: driverID
@@ -5856,7 +5856,7 @@ paths:
   /v4/driverlog/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllDriverLogV4
       parameters:
           - name: organizationID
@@ -5925,7 +5925,7 @@ paths:
   /v4/driverlog/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetDriverLogByIdV4
       parameters:
           - name: DriverID
@@ -5976,7 +5976,7 @@ paths:
   /v4/driverlogdetails/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllModifiedDriverLogV4
       parameters:
           - name: organizationID
@@ -6027,7 +6027,7 @@ paths:
   /v4/driverlogdetails/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetModifiedDriverLogByIdV4
       parameters:
           - name: DriverID
@@ -6066,7 +6066,7 @@ paths:
   /v5/driverlog/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllDriverLogV5
       parameters:
           - name: organizationID
@@ -6147,7 +6147,7 @@ paths:
   /v5/driverlog/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetDriverLogByIdV5
       parameters:
           - name: DriverID
@@ -6204,7 +6204,7 @@ paths:
   /v5/driverlogdetails/:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetAllModifiedDriverLogV5
       parameters:
           - name: organizationID
@@ -6267,7 +6267,7 @@ paths:
   /v5/driverlogdetails/{DriverID}:
     get:
       tags:
-        - IDriverLogWebService
+        - Compliance
       summary:  GetModifiedDriverLogByIdV5
       parameters:
           - name: DriverID
@@ -6312,7 +6312,7 @@ paths:
   /driverstatus/{DriverSID}:
     get:
       tags:
-        - IDriverStatusWebService
+        - Status
       summary:  GetDriverStatusById
       parameters:
           - name: DriverSID
@@ -6357,7 +6357,7 @@ paths:
   /driversstatus/:
     get:
       tags:
-        - IDriverStatusWebService
+        - Status
       summary:  GetDriversStatusBySIDs
       parameters:
           - name: driverSIDs
@@ -6402,7 +6402,7 @@ paths:
   /driverstate/{DriverID}:
     get:
       tags:
-        - IDriverStatusWebService
+        - Status
       summary:  GetDriverStatus
       parameters:
           - name: DriverID
@@ -6447,7 +6447,7 @@ paths:
   /driverstatus/:
     get:
       tags:
-        - IDriverStatusWebService
+        - Status
       summary:  GetAllDriverStatus
       parameters:
           - name: organizationSID
@@ -6528,7 +6528,7 @@ paths:
   /vehiclebreadcrumb/{VehicleSID}:
     get:
       tags:
-        - IVehicleBreadcrumbWebService
+        - Status
       summary:  GetVehicleBreadcrumbById
       parameters:
           - name: VehicleSID
@@ -6591,7 +6591,7 @@ paths:
   /vehiclebreadcrumbs/{VehicleID}:
     get:
       tags:
-        - IVehicleBreadcrumbWebService
+        - Status
       summary:  GetVehicleBreadcrumb
       parameters:
           - name: VehicleID
@@ -6654,7 +6654,7 @@ paths:
   /vehiclebreadcrumb/:
     get:
       tags:
-        - IVehicleBreadcrumbWebService
+        - Status
       summary:  GetAllVehicleBreadcrumb
       parameters:
           - name: organizationSID
@@ -6741,7 +6741,7 @@ paths:
   /vehiclestatus/{VehicleSID}:
     get:
       tags:
-        - IVehicleStatusWebService
+        - Status
       summary:  GetVehicleStatusById
       parameters:
           - name: VehicleSID
@@ -6780,7 +6780,7 @@ paths:
   /vehiclestate/{VehicleID}:
     get:
       tags:
-        - IVehicleStatusWebService
+        - Status
       summary:  GetVehicleStatus
       parameters:
           - name: VehicleID
@@ -6819,7 +6819,7 @@ paths:
   /vehiclestatus/:
     get:
       tags:
-        - IVehicleStatusWebService
+        - Status
       summary:  GetAllVehicleStatus
       parameters:
           - name: organizationSID
@@ -6888,7 +6888,7 @@ paths:
   /carrier/{carrierIdentity}:
     patch:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  PatchCarrier
       parameters:
           - name: carrierIdentity
@@ -6934,7 +6934,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  DeleteCarrier
       parameters:
           - name: carrierIdentity
@@ -6967,7 +6967,7 @@ paths:
   /carrier/byId/{carrierIdentity}:
     get:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  GetCarrierByIdentity
       parameters:
           - name: carrierIdentity
@@ -7000,7 +7000,7 @@ paths:
   /carrier/bySid/{carrierSID}:
     get:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  GetCarrierBySID
       parameters:
           - name: carrierSID
@@ -7033,7 +7033,7 @@ paths:
   /carriers:
     post:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  PostCarriers
       requestBody:
         content:
@@ -7072,7 +7072,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  PutCarriers
       requestBody:
         content:
@@ -7112,7 +7112,7 @@ paths:
   /carriers/byCompanyId/{carrierCompanyIdentity}:
     get:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  GetCarriersByCompanyIdentity
       parameters:
           - name: carrierCompanyIdentity
@@ -7145,7 +7145,7 @@ paths:
   /carriers/byId/{carrierIdentity}:
     get:
       tags:
-        - IMotorCarrierWebService
+        - Group
       summary:  GetCarriersByIdentity
       parameters:
           - name: carrierIdentity
@@ -7178,7 +7178,7 @@ paths:
   /DailyDetail:
     get:
       tags:
-        - IDailyDetailWebService
+        - Performance
       summary:  GetDailyDetail
       parameters:
           - name: organizationId
@@ -7259,7 +7259,7 @@ paths:
   /DailyDetail/vehicles/{vehicleId}/:
     get:
       tags:
-        - IDailyDetailWebService
+        - Performance
       summary:  GetDailyDetailByVehicle
       parameters:
           - name: vehicleId
@@ -7328,7 +7328,7 @@ paths:
   /DailyDetail/drivers/{driverId}/:
     get:
       tags:
-        - IDailyDetailWebService
+        - Performance
       summary:  GetDailyDetailByDriver
       parameters:
           - name: driverId
@@ -7397,7 +7397,7 @@ paths:
   /delay:
     get:
       tags:
-        - IDelayWebService
+        - Routing / Dispatch
       summary:  GetDelayByOrgID
       parameters:
           - name: organizationID
@@ -7430,7 +7430,7 @@ paths:
   /delay/{orgnizationID}/{delayName}:
     get:
       tags:
-        - IDelayWebService
+        - Routing / Dispatch
       summary:  GetDelayByOrgIDAndDelayName
       parameters:
           - name: orgnizationID
@@ -7469,7 +7469,7 @@ paths:
   /device/{phoneNumber}:
     patch:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  PatchDevices
       parameters:
           - name: phoneNumber
@@ -7516,7 +7516,7 @@ paths:
   /device/{PhoneNumber}:
     get:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  GetDevice
       parameters:
           - name: PhoneNumber
@@ -7548,7 +7548,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  DeleteDevice
       parameters:
           - name: PhoneNumber
@@ -7581,7 +7581,7 @@ paths:
   /devices:
     post:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  PostDevices
       requestBody:
         content:
@@ -7620,7 +7620,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  PutDevices
       requestBody:
         content:
@@ -7660,7 +7660,7 @@ paths:
   /devices/:
     get:
       tags:
-        - IDeviceWebService
+        - Entity Management
       summary:  GetDevices
       parameters:
           - name: organizationID
@@ -7723,7 +7723,7 @@ paths:
   /organization/{SID}:
     get:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  GetOrganization
       parameters:
           - name: SID
@@ -7756,7 +7756,7 @@ paths:
   /organizations:
     post:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  PostOrganizations
       requestBody:
         content:
@@ -7796,7 +7796,7 @@ paths:
   /organizations/:
     get:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  GetAll
       parameters:
           - name: organizationSid
@@ -7859,7 +7859,7 @@ paths:
   /organizations/{ID}:
     get:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  GetOrganizationById
       parameters:
           - name: ID
@@ -7891,7 +7891,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  PatchOrganization
       parameters:
           - name: ID
@@ -7938,7 +7938,7 @@ paths:
   /organizations/{ID}/performance:
     get:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  GetPerformanceSettingsByOrgId
       parameters:
           - name: ID
@@ -7970,7 +7970,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  UpdatePerformanceSettings
       parameters:
           - name: ID
@@ -8017,7 +8017,7 @@ paths:
   /organizations/performance/:
     get:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  GetAllPerformanceSettings
       parameters:
           - name: organizationId
@@ -8086,7 +8086,7 @@ paths:
   /organizations/update:
     put:
       tags:
-        - IOrganizationWebService
+        - Entity Management
       summary:  UpdateOrganizations
       requestBody:
         content:
@@ -8126,7 +8126,7 @@ paths:
   /resourcegroups/:
     get:
       tags:
-        - IResourceGroupWebService
+        - Entity Management
       summary:  GetResourceGroups
       parameters:
           - name: organizationSID
@@ -8201,7 +8201,7 @@ paths:
   /resourcegroups/{ResourceGroupSid}:
     get:
       tags:
-        - IResourceGroupWebService
+        - Entity Management
       summary:  GetResourceGroup
       parameters:
           - name: ResourceGroupSid
@@ -8234,7 +8234,7 @@ paths:
   /resourcegroup/{ResourceGroupId}:
     get:
       tags:
-        - IResourceGroupWebService
+        - Entity Management
       summary:  GetResourceGroupById
       parameters:
           - name: ResourceGroupId
@@ -8267,7 +8267,7 @@ paths:
   /route:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRoutes
       parameters:
           - name: organizationId
@@ -8330,7 +8330,7 @@ paths:
   /route/{organizationID}/{routeID}:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRouteShellByID
       parameters:
           - name: organizationID
@@ -8368,7 +8368,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  DeleteRouteShellByID
       parameters:
           - name: organizationID
@@ -8407,7 +8407,7 @@ paths:
   /route/{organizationID}/{routeID}/{tripID}:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRouteByID
       parameters:
           - name: organizationID
@@ -8451,7 +8451,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  DeleteRouteByID
       parameters:
           - name: organizationID
@@ -8496,7 +8496,7 @@ paths:
   /Routes:
     post:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  PostRoutes
       requestBody:
         content:
@@ -8535,7 +8535,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  PutRoutes
       requestBody:
         content:
@@ -8575,7 +8575,7 @@ paths:
   /v2/route:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRoutesV2
       parameters:
           - name: organizationId
@@ -8638,7 +8638,7 @@ paths:
   /v2/route/{organizationID}/{routeID}:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRouteShellByIDV2
       parameters:
           - name: organizationID
@@ -8677,7 +8677,7 @@ paths:
   /v2/route/{organizationID}/{routeID}/{tripID}:
     get:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  GetRouteByIDV2
       parameters:
           - name: organizationID
@@ -8722,7 +8722,7 @@ paths:
   /v2/Routes:
     post:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  PostRoutesV2
       requestBody:
         content:
@@ -8761,7 +8761,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IRouteWebService
+        - Routing / Dispatch
       summary:  PutRoutesV2
       requestBody:
         content:
@@ -8801,7 +8801,7 @@ paths:
   /sites:
     post:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PostSites
       requestBody:
         content:
@@ -8840,7 +8840,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PutSites
       requestBody:
         content:
@@ -8880,7 +8880,7 @@ paths:
   /sites/:
     get:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  GetSites
       parameters:
           - name: organizationID
@@ -8943,7 +8943,7 @@ paths:
   /sites/{SiteID}:
     get:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  GetSite
       parameters:
           - name: SiteID
@@ -8975,7 +8975,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PatchSite
       parameters:
           - name: SiteID
@@ -9021,7 +9021,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  DeleteSite
       parameters:
           - name: SiteID
@@ -9054,7 +9054,7 @@ paths:
   /v2/sites:
     post:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PostSitesV2
       requestBody:
         content:
@@ -9093,7 +9093,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PutSitesV2
       requestBody:
         content:
@@ -9133,7 +9133,7 @@ paths:
   /v2/sites/:
     get:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  GetSitesV2
       parameters:
           - name: organizationID
@@ -9196,7 +9196,7 @@ paths:
   /v2/sites/{SiteID}:
     get:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  GetSiteV2
       parameters:
           - name: SiteID
@@ -9228,7 +9228,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - ISiteWebService
+        - Entity Management
       summary:  PatchSiteV2
       parameters:
           - name: SiteID
@@ -9275,7 +9275,7 @@ paths:
   /Company:
     post:
       tags:
-        - ISubscriptionWebService
+        - SubscriptionWebService
       summary:  AddCompany
       requestBody:
         content:
@@ -9314,7 +9314,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - ISubscriptionWebService
+        - SubscriptionWebService
       summary:  UpdateCompany
       requestBody:
         content:
@@ -9354,7 +9354,7 @@ paths:
   /Company/{companyId}:
     put:
       tags:
-        - ISubscriptionWebService
+        - SubscriptionWebService
       summary:  InActiveCompany
       parameters:
           - name: companyId
@@ -9387,7 +9387,7 @@ paths:
   /Subscriptions/{netSuiteCompanyId}:
     put:
       tags:
-        - ISubscriptionWebService
+        - SubscriptionWebService
       summary:  UpdateSubscription
       parameters:
           - name: netSuiteCompanyId
@@ -9434,7 +9434,7 @@ paths:
   /trailer/{trailerID}:
     get:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  GetTrailerByTrailerID
       parameters:
           - name: trailerID
@@ -9467,7 +9467,7 @@ paths:
   /trailer/{TrailerID}:
     patch:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PatchTrailer
       parameters:
           - name: TrailerID
@@ -9513,7 +9513,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  DeleteTrailer
       parameters:
           - name: TrailerID
@@ -9546,7 +9546,7 @@ paths:
   /trailers:
     get:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  GetTrailerList
       parameters:
           - name: organizationID
@@ -9614,7 +9614,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PostTrailers
       requestBody:
         content:
@@ -9653,7 +9653,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PutTrailers
       requestBody:
         content:
@@ -9693,7 +9693,7 @@ paths:
   /v2/trailer/{trailerId}:
     get:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  GetTrailerByTrailerIdV2
       parameters:
           - name: trailerId
@@ -9726,7 +9726,7 @@ paths:
   /v2/trailer/{TrailerID}:
     patch:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PatchTrailerV2
       parameters:
           - name: TrailerID
@@ -9773,7 +9773,7 @@ paths:
   /v2/trailers:
     get:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  GetTrailerListV2
       parameters:
           - name: organizationID
@@ -9841,7 +9841,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PostTrailersV2
       requestBody:
         content:
@@ -9880,7 +9880,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - ITrailerWebService
+        - Entity Management
       summary:  PutTrailersV2
       requestBody:
         content:
@@ -9920,7 +9920,7 @@ paths:
   /trip:
     get:
       tags:
-        - ITripWebService
+        - Routing / Dispatch
       summary:  GetTrips
       parameters:
           - name: organizationID
@@ -10006,7 +10006,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - ITripWebService
+        - Routing / Dispatch
       summary:  PostTrips
       requestBody:
         content:
@@ -10046,7 +10046,7 @@ paths:
   /trip/{organizationID}/{routeID}/{tripID}:
     get:
       tags:
-        - ITripWebService
+        - Routing / Dispatch
       summary:  GetTripByTripID
       parameters:
           - name: organizationID
@@ -10091,7 +10091,7 @@ paths:
   /trip/{organizationID}/{routeID}/{TripID}:
     delete:
       tags:
-        - ITripWebService
+        - Routing / Dispatch
       summary:  DeleteTrip
       parameters:
           - name: organizationID
@@ -10136,7 +10136,7 @@ paths:
   /tripV2:
     get:
       tags:
-        - ITripWebService
+        - Routing / Dispatch
       summary:  GetTripsV2
       parameters:
           - name: organizationID
@@ -10241,7 +10241,7 @@ paths:
   /users:
     post:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  PostUsers
       requestBody:
         content:
@@ -10280,7 +10280,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  PutUsers
       requestBody:
         content:
@@ -10320,7 +10320,7 @@ paths:
   /users/:
     get:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  GetUsers
       parameters:
           - name: organizationID
@@ -10383,7 +10383,7 @@ paths:
   /users/{UserID}:
     get:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  GetUser
       parameters:
           - name: UserID
@@ -10415,7 +10415,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  PatchUsers
       parameters:
           - name: UserID
@@ -10461,7 +10461,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IUserWebService
+        - Entity Management
       summary:  DeleteUser
       parameters:
           - name: UserID
@@ -10494,7 +10494,7 @@ paths:
   /formtemplatecontent/:
     get:
       tags:
-        - IFormTemplateContentWebService
+        - Form / Messaging
       summary:  GetFormTemplateContents
       parameters:
           - name: formCategorySID
@@ -10562,7 +10562,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - IFormTemplateContentWebService
+        - Form / Messaging
       summary:  PostFormTemplateContents
       parameters:
           - name: newVersion
@@ -10609,7 +10609,7 @@ paths:
   /formtemplatecontent/{FormNumber}:
     get:
       tags:
-        - IFormTemplateContentWebService
+        - Form / Messaging
       summary:  GetFormTemplateContent
       parameters:
           - name: FormNumber
@@ -10641,7 +10641,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IFormTemplateContentWebService
+        - Form / Messaging
       summary:  DeleteFormTemplateContent
       parameters:
           - name: FormNumber
@@ -10674,7 +10674,7 @@ paths:
   /formtemplateheader:
     put:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  PutFormTemplateHeaders
       requestBody:
         content:
@@ -10714,7 +10714,7 @@ paths:
   /formtemplateheader/:
     get:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  GetFormTemplateHeaders
       parameters:
           - name: formCategorySID
@@ -10782,7 +10782,7 @@ paths:
                   type: "string"
     post:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  PostFormTemplateHeaders
       parameters:
           - name: newVersion
@@ -10829,7 +10829,7 @@ paths:
   /formtemplateheader/{FormNumber}:
     get:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  GetFormTemplateHeader
       parameters:
           - name: FormNumber
@@ -10861,7 +10861,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  PatchFormTemplateHeader
       parameters:
           - name: FormNumber
@@ -10907,7 +10907,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IFormTemplateHeaderWebService
+        - Form / Messaging
       summary:  DeleteFormTemplateHeader
       parameters:
           - name: FormNumber
@@ -10940,7 +10940,7 @@ paths:
   /formcategories:
     post:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  PostFormTemplateCategories
       requestBody:
         content:
@@ -10979,7 +10979,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  PutFormTemplateCategories
       requestBody:
         content:
@@ -11019,7 +11019,7 @@ paths:
   /formcategories/:
     get:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  GetFormTemplateCategories
       parameters:
           - name: limit
@@ -11058,7 +11058,7 @@ paths:
   /formcategories/{FormTemplateCategoryID}:
     patch:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  PatchFormTemplateCategories
       parameters:
           - name: FormTemplateCategoryID
@@ -11105,7 +11105,7 @@ paths:
   /formcategories/{FormTemplateCategorySID}:
     get:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  GetFormTemplateCategory
       parameters:
           - name: FormTemplateCategorySID
@@ -11137,7 +11137,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  DeleteFormTemplateCategory
       parameters:
           - name: FormTemplateCategorySID
@@ -11170,7 +11170,7 @@ paths:
   /formcategory/{FormTemplateCategoryID}:
     get:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  GetFormTemplateCategoryById
       parameters:
           - name: FormTemplateCategoryID
@@ -11202,7 +11202,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IFormTemplateCategoryWebService
+        - Form / Messaging
       summary:  DeleteFormTemplateCategoryById
       parameters:
           - name: FormTemplateCategoryID
@@ -11235,7 +11235,7 @@ paths:
   /vehicle/{VehicleID}:
     get:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  GetVehicleById
       parameters:
           - name: VehicleID
@@ -11267,7 +11267,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  PatchVehicles
       parameters:
           - name: VehicleID
@@ -11313,7 +11313,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  DeleteVehicleById
       parameters:
           - name: VehicleID
@@ -11346,7 +11346,7 @@ paths:
   /vehicles:
     post:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  PostVehicles
       requestBody:
         content:
@@ -11385,7 +11385,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  PutVehicles
       requestBody:
         content:
@@ -11425,7 +11425,7 @@ paths:
   /vehicles/:
     get:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  GetVehicles
       parameters:
           - name: organizationSID
@@ -11500,7 +11500,7 @@ paths:
   /vehicles/{VehicleSID}:
     get:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  GetVehicle
       parameters:
           - name: VehicleSID
@@ -11532,7 +11532,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IVehicleWebService
+        - Entity Management
       summary:  DeleteVehicle
       parameters:
           - name: VehicleSID
@@ -11565,7 +11565,7 @@ paths:
   /driver/{DriverID}:
     get:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  GetDriverById
       parameters:
           - name: DriverID
@@ -11597,7 +11597,7 @@ paths:
                   type: "string"
     patch:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  PatchDrivers
       parameters:
           - name: DriverID
@@ -11643,7 +11643,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  DeleteDriverById
       parameters:
           - name: DriverID
@@ -11676,7 +11676,7 @@ paths:
   /drivers:
     post:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  PostDrivers
       requestBody:
         content:
@@ -11715,7 +11715,7 @@ paths:
                   type: "string"
     put:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  PutDrivers
       requestBody:
         content:
@@ -11755,7 +11755,7 @@ paths:
   /drivers/:
     get:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  GetDrivers
       parameters:
           - name: organizationSID
@@ -11830,7 +11830,7 @@ paths:
   /drivers/{DriverSID}:
     get:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  GetDriver
       parameters:
           - name: DriverSID
@@ -11862,7 +11862,7 @@ paths:
                   type: "string"
     delete:
       tags:
-        - IDriverWebService
+        - Entity Management
       summary:  DeleteDriver
       parameters:
           - name: DriverSID
@@ -12227,6 +12227,53 @@ components:
           example: 
         StandardsEventTotalsList:
           $ref: "#/components/schemas/StandardsEventTotals"
+          example: 
+        OrganizationName:
+          type: "string"
+          example: Xata Logistics
+        OrganizationID:
+          type: "string"
+          example: e3f957b6-1c0b-4e3e-bd3c-7aef6efb3772
+        ResourceGroupIDList:
+          type: array
+          items: 
+            type: string
+          example: ["a1f957b6-1c0b-4e3e-bd3c-7aef6efb3001", "b2f957b6-1c0b-4e3e-bd3c-7aef6efb3002"]
+        RouteID:
+          type: "string"
+          example: b467d6f2-4b3b-4ed5-bc5a-7980d58a1283
+        TripID:
+          type: "string"
+          example: c7654abc-2b1c-44ff-9a6e-472b08af4f12
+        DriverID:
+          type: "string"
+          example: d4f6e1d8-5f89-4b1e-833d-8a96e4e4c71b
+        DriverName:
+          type: "string"
+          example: John Doe
+        CoDriverID:
+          type: "string"
+          example: e7c1c9aa-6f32-4779-81d8-021b5e8b497f
+        CoDriverName:
+          type: "string"
+          example: Jane Smith
+        TrailerID:
+          type: "string"
+          example: f1a23c45-7b89-423d-a6e9-4b3e5a8c678d
+        StartDateTime:
+          type: "string"
+          example: 2025-01-07T10:00:00Z
+        PlanEventList:
+          $ref: "#/components/schemas/PlanEvent"
+          example: 
+        PlanEventTotalsList:
+          $ref: "#/components/schemas/PlanEventTotals"
+          example: 
+        ActualEventList:
+          $ref: "#/components/schemas/ActualEvent"
+          example: 
+        ActualEventTotalsList:
+          $ref: "#/components/schemas/ActualEventTotals"
           example: 
     PlanVsActual:
       properties:
@@ -14324,6 +14371,69 @@ components:
           type: string
           format: datetime
           example: 2024-08-22 16:00:46.356
+        CityName:
+          type: "string"
+          example: Dallas
+        Comment:
+          type: "string"
+          example: Comment
+        Current:
+          type: "boolean"
+          example: true
+        DriverID:
+          type: "string"
+          example: DR712
+        EditedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2024-05-31 11:20:00
+        EventType:
+          type: "string"
+          example: Driver duty status changed to Driving
+        Latitude:
+          type: number
+          format: double
+          example: 32.7830600
+        LocationName:
+          type: "string"
+          example: 1km E Mississauga ON
+        Longitude:
+          type: number
+          format: double
+          example: -96.8066700
+        ModifiedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2022-05-31 11:20:00
+        RecordSID:
+          type: "string"
+          example: 65165
+        RecordTime:
+          type: string
+          format: datetime
+          example: 2024-05-31 11:20:00
+        Remark:
+          type: "string"
+          example: Beginning of Restart Period
+        RowID:
+          type: "string"
+          example: 654
+        Sequence:
+          type: "string"
+          example: String
+        SiteID:
+          type: "string"
+          example: 12
+        StateName:
+          type: "string"
+          example: Texas
+        Odometer:
+          type: number
+          format: float
+          nullable: true
+          example: 798123.321
     DriverLogV3:
       properties:
         CanadianRegistrationNumber:
@@ -15889,6 +15999,107 @@ components:
         IsYard:
           type: "boolean"
           example: false
+        Address:
+          type: "string"
+          example: 1234 Elm St, Springfield, IL
+        ArrivalGeoCodeType:
+          type: "string"
+          example: GPS
+        ArrivalPolygonPoints:
+          type: "string"
+          example: Point1, Point2, Point3
+        ArrivalRadius:
+          type: number
+          format: double
+          example: 5.0
+        City:
+          type: "string"
+          example: Springfield
+        Country:
+          type: "string"
+          example: USA
+        CreateDate:
+          type: string
+          format: datetime
+          example: 2024-12-05T14:30:00
+        DepartureGeoCodeType:
+          type: "string"
+          example: GPS
+        DeparturePolygonPoints:
+          type: "string"
+          example: Point4, Point5, Point6
+        DepartureRadius:
+          type: number
+          format: double
+          example: 10.0
+        DepartureSameAsArrival:
+          type: "boolean"
+          example: true
+        DeliveryWindows:
+          $ref: "#/components/schemas/DeliveryWindow"
+          example: 
+        Latitude:
+          type: number
+          format: double
+          example: 39.7817
+        Longitude:
+          type: number
+          format: double
+          example: -89.6501
+        ModifiedBy:
+          type: "string"
+          example: Admin
+        ModifiedDate:
+          type: string
+          format: datetime
+          example: 2024-12-05T15:00:00
+        OrganizationID:
+          type: "string"
+          example: b1e3f7d9-bc9f-47b4-89f7-2bda5b194e6b
+        OrganizationName:
+          type: "string"
+          example: Xata Corporation
+        PostalCode:
+          type: "string"
+          example: 62701
+        ResourceGroupIDs:
+          type: array
+          items: 
+            type: string
+          example: ["Group1", "Group2"]
+        SiteID:
+          type: "string"
+          example: 5c0b0a0d-9f4a-47e2-9574-dcc1b989290f
+        Name:
+          type: "string"
+          example: Main Warehouse
+        SiteType:
+          type: "string"
+          example: Warehouse
+        StateName:
+          type: "string"
+          example: Illinois
+        Measure:
+          type: "string"
+          example: Kilogram
+        UserDefinedField1:
+          type: "string"
+          example: Additional information for field 1
+        UserDefinedField2:
+          type: "string"
+          example: Additional information for field 2
+        UserDefinedField3:
+          type: "string"
+          example: Additional information for field 3
+        UserDefinedField4:
+          type: "string"
+          example: Additional information for field 4
+        UserDefinedField5:
+          type: "string"
+          example: Additional information for field 5
+        TimeZone:
+          type: "string"
+          example: UTC-5
     CRMCompanyPackageInfo:
       properties:
         company:
@@ -16040,6 +16251,62 @@ components:
         SerialNumber:
           type: "string"
           example: 1HABC1828JW123456
+        CompanyName:
+          type: "string"
+          example: Company name
+        CreateDate:
+          type: string
+          format: datetime
+          example: 2021-05-26 22:09:14.000
+        ModifiedBy:
+          type: integer
+          format: int64
+          example: 587
+        ModifiedDate:
+          type: string
+          format: datetime
+          example: 2024-05-26 22:09:14.000
+        OrganizationID:
+          type: "string"
+          example: 830be7d9-acbc-4d08-bbd2-cf5bae913b6c
+        OrganizationName:
+          type: "string"
+          example: Organization Name
+        StateName:
+          type: "string"
+          example: Nevada
+        Status:
+          type: "string"
+          example: true
+        TrailerIdentity:
+          type: "string"
+          example: 3216984362
+        TrailerResourceGroupIDs:
+          type: array
+          items: 
+            type: string
+          example: ["1","2","3"]
+        TrailerType:
+          type: "string"
+          example: General
+        VIN:
+          type: "string"
+          example: 1HABC1828JW123456
+        UserDefinedField1:
+          type: "string"
+          example: String
+        UserDefinedField2:
+          type: "string"
+          example: String
+        UserDefinedField3:
+          type: "string"
+          example: String
+        UserDefinedField4:
+          type: "string"
+          example: String
+        UserDefinedField5:
+          type: "string"
+          example: String
     Trip:
       properties:
         CargoOption:
@@ -16798,9 +17065,6 @@ components:
           items: 
             type: string
           example: ["1","2","3"]
-        AllowDriverCarrierChange:
-          type: "boolean"
-          example: false
     FormData:
       properties:
         FormMessageData:
@@ -17811,6 +18075,69 @@ components:
           example: Texas
     DriverLogDetailModified:
       properties:
+        CityName:
+          type: "string"
+          example: Dallas
+        Comment:
+          type: "string"
+          example: Comment
+        Current:
+          type: "boolean"
+          example: true
+        DriverID:
+          type: "string"
+          example: DR712
+        EditedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2024-05-31 11:20:00
+        EventType:
+          type: "string"
+          example: Driver duty status changed to Driving
+        Latitude:
+          type: number
+          format: double
+          example: 32.7830600
+        LocationName:
+          type: "string"
+          example: 1km E Mississauga ON
+        Longitude:
+          type: number
+          format: double
+          example: -96.8066700
+        ModifiedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2022-05-31 11:20:00
+        RecordSID:
+          type: "string"
+          example: 65165
+        RecordTime:
+          type: string
+          format: datetime
+          example: 2024-05-31 11:20:00
+        Remark:
+          type: "string"
+          example: Beginning of Restart Period
+        RowID:
+          type: "string"
+          example: 654
+        Sequence:
+          type: "string"
+          example: String
+        SiteID:
+          type: "string"
+          example: 12
+        StateName:
+          type: "string"
+          example: Texas
+        Odometer:
+          type: number
+          format: float
+          nullable: true
+          example: 798123.321
     DriverLogDetailV3:
       properties:
         AccumulatedVehicleMiles:
@@ -17955,6 +18282,73 @@ components:
         VehicleID:
           type: "string"
           example: VHC321
+        RecordTimeUTC:
+          type: string
+          format: datetime
+          example: 2024-08-22 16:00:46.356
+        CityName:
+          type: "string"
+          example: Dallas
+        Comment:
+          type: "string"
+          example: Comment
+        Current:
+          type: "boolean"
+          example: true
+        DriverID:
+          type: "string"
+          example: DR712
+        EditedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2024-05-31 11:20:00
+        EventType:
+          type: "string"
+          example: Driver duty status changed to Driving
+        Latitude:
+          type: number
+          format: double
+          example: 32.7830600
+        LocationName:
+          type: "string"
+          example: 1km E Mississauga ON
+        Longitude:
+          type: number
+          format: double
+          example: -96.8066700
+        ModifiedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2022-05-31 11:20:00
+        RecordSID:
+          type: "string"
+          example: 65165
+        RecordTime:
+          type: string
+          format: datetime
+          example: 2024-05-31 11:20:00
+        Remark:
+          type: "string"
+          example: Beginning of Restart Period
+        RowID:
+          type: "string"
+          example: 654
+        Sequence:
+          type: "string"
+          example: String
+        SiteID:
+          type: "string"
+          example: 12
+        StateName:
+          type: "string"
+          example: Texas
+        Odometer:
+          type: number
+          format: float
+          nullable: true
+          example: 798123.321
     DriverLogDetailV5:
       properties:
         CityName:
@@ -18030,6 +18424,76 @@ components:
         Annotations:
           $ref: "#/components/schemas/DriverLogAnnotations"
           example: 
+        VehicleID:
+          type: "string"
+          example: VHC321
+        RecordTimeUTC:
+          type: string
+          format: datetime
+          example: 2024-08-22 16:00:46.356
+        CityName:
+          type: "string"
+          example: Dallas
+        Comment:
+          type: "string"
+          example: Comment
+        Current:
+          type: "boolean"
+          example: true
+        DriverID:
+          type: "string"
+          example: DR712
+        EditedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2024-05-31 11:20:00
+        EventType:
+          type: "string"
+          example: Driver duty status changed to Driving
+        Latitude:
+          type: number
+          format: double
+          example: 32.7830600
+        LocationName:
+          type: "string"
+          example: 1km E Mississauga ON
+        Longitude:
+          type: number
+          format: double
+          example: -96.8066700
+        ModifiedDate:
+          type: string
+          format: datetime
+          nullable: true
+          example: 2022-05-31 11:20:00
+        RecordSID:
+          type: "string"
+          example: 65165
+        RecordTime:
+          type: string
+          format: datetime
+          example: 2024-05-31 11:20:00
+        Remark:
+          type: "string"
+          example: Beginning of Restart Period
+        RowID:
+          type: "string"
+          example: 654
+        Sequence:
+          type: "string"
+          example: String
+        SiteID:
+          type: "string"
+          example: 12
+        StateName:
+          type: "string"
+          example: Texas
+        Odometer:
+          type: number
+          format: float
+          nullable: true
+          example: 798123.321
     DailyMotionSegmentInfo:
       properties:
         DateTime:
@@ -18681,6 +19145,12 @@ components:
         ActivityID:
           type: "string"
           example: ACT123
+        ActivityType:
+          type: "string"
+          example: Unloading
+        Fields:
+          $ref: "#/components/schemas/RouteStopActivityField"
+          example: 
     TripStopActivity:
       properties:
         ActivityType:
