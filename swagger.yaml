@@ -9260,110 +9260,6 @@ paths:
                 type: "string"
 components:
   schemas:
-    DelayDetailReport:
-      properties:
-        OrganizationName:
-          type: "string"
-          example: Organization Name
-        OrganizationID:
-          type: "string"
-          example: 830be7d9-acbc-4d08-bbd2-cf5bae913b6c
-        DelayReason:
-          type: "string"
-          example: Weather
-        DelayDetailList:
-          $ref: "#/components/schemas/DelaysDetail"
-          example: 
-    DelaySummaryReport:
-      properties:
-        OrganizationID:
-          type: "string"
-          example: 830be7d9-acbc-4d08-bbd2-cf5bae913b6c
-        OrganizationName:
-          type: "string"
-          example: Organization Name
-        TotalCount:
-          type: integer
-          format: int32
-          example: 2
-        TotalDuration:
-          type: integer
-          format: int32
-          example: 500
-        TotalAverageDuration:
-          type: integer
-          format: int32
-          example: 450
-        StartDateTime:
-          type: "string"
-          example: 2024-04-15 16:00:46.356
-        EndDateTime:
-          type: "string"
-          example: 2024-04-15 18:00:46.356
-        DelaySummaryList:
-          $ref: "#/components/schemas/DelaySummary"
-          example: 
-    DelaysDetail:
-      properties:
-        DateTime:
-          type: "string"
-          example: 2024-08-22 16:00:46.356
-        Duration:
-          type: integer
-          format: int32
-          example: 3216513
-        DutyStatus:
-          type: "string"
-          example: On Duty
-        EndedBy:
-          type: "string"
-          example: Weather
-        Location:
-          type: "string"
-          example: San Francisco
-        RouteID:
-          type: "string"
-          example: 21651
-        TripID:
-          type: "string"
-          example: 9813
-        DriverName:
-          type: "string"
-          example: John
-        DriverID:
-          type: "string"
-          example: 9875Driver
-        CoDriverName:
-          type: "string"
-          example: Jack
-        CoDriverID:
-          type: "string"
-          example: 123Jack
-    DelaySummary:
-      properties:
-        Reason:
-          type: "string"
-          example: Weather
-        Count:
-          type: integer
-          format: int32
-          example: 2
-        Duration:
-          type: integer
-          format: int32
-          example: 500
-        AverageDuration:
-          type: integer
-          format: int32
-          example: 450
-        BeginTime:
-          type: string
-          format: datetime
-          example: 2024-04-15 16:00:46.356
-        EndTime:
-          type: string
-          format: datetime
-          example: 2024-04-15 18:30:46.356
     InboxMessage:
       properties:
         Sid:
@@ -9656,6 +9552,49 @@ components:
         Description:
           type: "string"
           example: Vehicle Status
+    DelayDetailReport:
+      properties:
+        OrganizationName:
+          type: "string"
+          example: 
+        OrganizationID:
+          type: "string"
+          example: 
+        DelayReason:
+          type: "string"
+          example: 
+        DelayDetailList:
+          $ref: "#/components/schemas/DelaysDetail"
+          example: 
+    DelaySummaryReport:
+      properties:
+        OrganizationID:
+          type: "string"
+          example: 
+        OrganizationName:
+          type: "string"
+          example: 
+        TotalCount:
+          type: integer
+          format: int32
+          example: 
+        TotalDuration:
+          type: integer
+          format: int32
+          example: 
+        TotalAverageDuration:
+          type: integer
+          format: int32
+          example: 
+        StartDateTime:
+          type: "string"
+          example: 
+        EndDateTime:
+          type: "string"
+          example: 
+        DelaySummaryList:
+          $ref: "#/components/schemas/DelaySummary"
+          example: 
     OutOfRouteReport:
       properties:
         OrganizationID:
@@ -11752,8 +11691,7 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          schema:
-            $ref: "#/components/schemas/DriverLogDetailModified"
+          $ref: "#/components/schemas/DriverLogDetailModified"
           example: 
         ReportDateTime:
           type: string
@@ -11829,8 +11767,7 @@ components:
           type: "string"
           example: TXS441
         LogDetails:
-          schema:
-            $ref: "#/components/schemas/DriverLogDetailModifiedV2"
+          $ref: "#/components/schemas/DriverLogDetailModifiedV2"
           example: 
     DriverLogDetailModifiedV2:
       properties:
@@ -12196,8 +12133,7 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          schema:
-            $ref: "#/components/schemas/DriverLogDetailModifiedV4"
+          $ref: "#/components/schemas/DriverLogDetailModifiedV4"
           example: 
         ReportDateTime:
           type: string
@@ -12372,8 +12308,7 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          schema:
-            $ref: "#/components/schemas/DriverLogDetailModifiedV5"
+          $ref: "#/components/schemas/DriverLogDetailModifiedV5"
           example: 
         ReportDateTime:
           type: string
@@ -14538,6 +14473,67 @@ components:
       properties:
         FormMessageData:
           $ref: "#/components/schemas/FieldData"
+          example: 
+    DelaysDetail:
+      properties:
+        DateTime:
+          type: "string"
+          example: 
+        Duration:
+          type: integer
+          format: int32
+          example: 
+        DutyStatus:
+          type: "string"
+          example: 
+        EndedBy:
+          type: "string"
+          example: 
+        Location:
+          type: "string"
+          example: 
+        RouteID:
+          type: "string"
+          example: 
+        TripID:
+          type: "string"
+          example: 
+        DriverName:
+          type: "string"
+          example: 
+        DriverID:
+          type: "string"
+          example: 
+        CoDriverName:
+          type: "string"
+          example: 
+        CoDriverID:
+          type: "string"
+          example: 
+    DelaySummary:
+      properties:
+        Reason:
+          type: "string"
+          example: 
+        Count:
+          type: integer
+          format: int32
+          example: 
+        Duration:
+          type: integer
+          format: int32
+          example: 
+        AverageDuration:
+          type: integer
+          format: int32
+          example: 
+        BeginTime:
+          type: string
+          format: datetime
+          example: 
+        EndTime:
+          type: string
+          format: datetime
           example: 
     Stop:
       properties:
