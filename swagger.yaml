@@ -11752,7 +11752,8 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModified"
+          schema:
+            $ref: "#/components/schemas/DriverLogDetailModified"
           example: 
         ReportDateTime:
           type: string
@@ -11828,7 +11829,8 @@ components:
           type: "string"
           example: TXS441
         LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModifiedV2"
+          schema:
+            $ref: "#/components/schemas/DriverLogDetailModifiedV2"
           example: 
     DriverLogDetailModifiedV2:
       properties:
@@ -12194,7 +12196,8 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModifiedV4"
+          schema:
+            $ref: "#/components/schemas/DriverLogDetailModifiedV4"
           example: 
         ReportDateTime:
           type: string
@@ -12369,7 +12372,8 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModifiedV5"
+          schema:
+            $ref: "#/components/schemas/DriverLogDetailModifiedV5"
           example: 
         ReportDateTime:
           type: string
