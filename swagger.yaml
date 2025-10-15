@@ -11691,7 +11691,7 @@ components:
           type: "string"
           example: US 8/80 Day NC hrs.
         LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModifiedV2"
+          $ref: "#/components/schemas/DriverLogDetailModified"
         ReportDateTime:
           type: string
           format: datetime
