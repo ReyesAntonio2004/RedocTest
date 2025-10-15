@@ -11690,8 +11690,6 @@ components:
         HOSRuleSet:
           type: "string"
           example: US 8/80 Day NC hrs.
-        LogDetails:
-          $ref: "#/components/schemas/DriverLogDetailModified"
         ReportDateTime:
           type: string
           format: datetime
@@ -15537,71 +15535,6 @@ components:
         StateName:
           type: "string"
           example: Texas
-    DriverLogDetailModified:
-      properties:
-        CityName:
-          type: "string"
-          example: Dallas
-        Comment:
-          type: "string"
-          example: Comment
-        Current:
-          type: "boolean"
-          example: true
-        DriverID:
-          type: "string"
-          example: DR712
-        EditedDate:
-          type: string
-          format: datetime
-          nullable: true
-          example: 2024-05-31 11:20:00
-        EventType:
-          type: "string"
-          example: Driver duty status changed to Driving
-        Latitude:
-          type: number
-          format: double
-          example: 32.7830600
-        LocationName:
-          type: "string"
-          example: 1km E Mississauga ON
-        Longitude:
-          type: number
-          format: double
-          example: -96.8066700
-        ModifiedDate:
-          type: string
-          format: datetime
-          nullable: true
-          example: 2022-05-31 11:20:00
-        RecordSID:
-          type: "string"
-          example: 65165
-        RecordTime:
-          type: string
-          format: datetime
-          example: 2024-05-31 11:20:00
-        Remark:
-          type: "string"
-          example: Beginning of Restart Period
-        RowID:
-          type: "string"
-          example: 654
-        Sequence:
-          type: "string"
-          example: String
-        SiteID:
-          type: "string"
-          example: 12
-        StateName:
-          type: "string"
-          example: Texas
-        Odometer:
-          type: number
-          format: float
-          nullable: true
-          example: 798123.321
     DriverLogDetailV3:
       properties:
         AccumulatedVehicleMiles:
